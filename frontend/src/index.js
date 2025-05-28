@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// ✅ CSS de Bootstrap
+// CSS de Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-// ✅ JS de Bootstrap (nécessaire pour le menu burger, modals, etc.)
+// JS de Bootstrap (nécessaire pour le menu burger, modals, etc.)
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

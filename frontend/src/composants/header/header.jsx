@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Logo  from '../assets/img/Logo.png'
+import Logo  from '../../assets/img/Logo.png';
+import '../../composants/header/header.css';
 
 const palette = {
   headerBg: '#0074c7',    // Bleu
@@ -17,7 +18,7 @@ export default function Header({ onSearch }) {
 
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark"
+      className="navbar navbar-expand-lg navbar-dark Graphik-bold"
       style={{ backgroundColor: palette.headerBg }}
     >
       <div className="container-fluid">
