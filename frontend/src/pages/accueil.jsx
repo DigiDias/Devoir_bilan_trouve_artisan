@@ -43,7 +43,7 @@ const Accueil = () => {
     <div className="container mt-5">
       <h1 className="text-center mb-4">Comment trouver mon artisan</h1>
 
-      <div className="d-flex ">
+      <div className="d-flex justify-content-between">
       <div className="d-flex flex-column">
       <div className="d-flex flex-column">
         <p>1 - Choisir la catégorie d’artisanat dans le menu.</p>
@@ -93,9 +93,17 @@ const Accueil = () => {
       {showForm && (
         <form className="d-flex flex-column" >
           <label htmlFor="nom" className="form-label">nom</label>
-          <input type="text" placeholder="Nom" name="nom" />
+          <input type="text" placeholder="Nom" name="nom" required/>
             <label htmlFor="prenom" className="form-label">prenom</label>
-          <input type="text" placeholder="Prénom" name="prenom" />
+          <input type="text" placeholder="Prénom" name="prenom" required style={{ width: "300px" }}/>
+
+          <label htmlFor="email" className="form-label">Email</label>
+          <input type="text" placeholder="Email" name="email" required/>
+
+          <label htmlFor="tel" className="form-label">Téléphone</label>
+          <input type="text" placeholder="Numero de télèphone" name="tel" required/>
+
+
           <button type="submit">Envoyer</button>
         </form>
       )}
