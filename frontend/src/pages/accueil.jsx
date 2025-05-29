@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 
 const Accueil = () => {
@@ -150,44 +150,79 @@ const Accueil = () => {
           </div>
         </div>
 
+
+
         {showForm && (
           <div className="ms-4">
             <h2>3. Le contacter via le formulaire de contact.</h2>
-            <p>Pour contacter votre artisan {selectedArtisan?.nom_artisan}</p>
+            <p>Pour contacter votre artisan <strong>{selectedArtisan?.nom_artisan}</strong></p>
             <p>Veuillez remplir le formulaire ci-dessous :</p>
             <h2>4. Une réponse sera apportée sous 48h. </h2>
 
-            <form
-              className="d-flex flex-column"
-              style={{ width: "300px", gap: "10px" }}
-            >
-              <label htmlFor="nom" className="form-label">
-                Nom
-              </label>
-              <input type="text" id="nom" name="nom" placeholder="Nom" required />
+</div>)}
+</div>
+{showForm && (
+  
+  <div>
+  <h3 className="text-center">Formulaire de contact pour <strong>{selectedArtisan?.nom_artisan}</strong></h3>
 
-              <label htmlFor="prenom" className="form-label">
-                Prénom
-              </label>
-              <input type="text" id="prenom" name="prenom" placeholder="Prénom" required />
+  <form className="d-flex flex-column gap-3 mt-4">
+    <div className="row">
+    <div className="col">
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Nom"
+        aria-label="Nom"
+      />
+    </div>
+    <div className="col">
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Prenom"
+        aria-label="Prenom"
+      />
+    </div>
+    </div>
 
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input type="email" id="email" name="email" placeholder="Email" required />
+     <div className="row">
+        <div className="col">
+      <input
+        type="tel"
+        className="form-control"
+        placeholder="Teléphone"
+        aria-label="Tel"
+      />
+    </div>
+    <div className="col">
+      <input
+        type="email"
+        className="form-control"
+        placeholder="Email"
+        aria-label="Email"
+      />
+    </div>
+    </div>
 
-              <label htmlFor="tel" className="form-label">
-                Téléphone
-              </label>
-              <input type="tel" id="tel" name="tel" placeholder="Numéro de téléphone" required />
+    <div className="col">
+      <textarea
+        type="message"
+        className="form-control"
+        placeholder="Votre message"
+        aria-label="message"
+      style={{ height: "10rem" }}/>
+    
 
-              <button type="submit" className="btn btn-primary mt-3">
-                Envoyer
-              </button>
-            </form>
-          </div>
+    </div>
+    <div className="dflex text-center">
+    <button type="submit" class="btn btn-primary text-center" style={{ width: "7rem" }} >Envoyer</button>
+    </div>
+  </form>
+  </div>
+
         )}
-      </div>
+      
 
       <h3 className="text-center mt-5">Les 3 artisans du mois</h3>
       <div className="d-flex flex-wrap justify-content-center mt-3 gap-5">
