@@ -1,11 +1,10 @@
-const db = require('../serveur'); // serveur MYSQL
+const db = require('../serveur');
 
-exports.getCategories = () => {
-  return new Promise((resolve, reject) => {
-    const sql = 'SELECT nom, id_categorie FROM T_Categorie ORDER BY nom ASC';
-    db.query(sql, (err, results) => {
-      if (err) reject(err);
-      else resolve(results);
-    });
-  });
+exports.getCategories = async () => {
+  try {
+    const [results] = await db.query('SELECT nom, id_categorie FROM T_Categorie ORDER BY nom ASC');
+    return results;
+  } catch (err) {
+    throw err;
+  }
 };

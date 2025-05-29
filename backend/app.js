@@ -4,6 +4,7 @@ require('dotenv').config();
 const cors = require('cors');
 const categorieRoutes = require('./routes/RouteCategorie');
 const artisanRoutes = require('./routes/RouteArtisans');
+const artisanMoisRoutes = require('./routes/RouteArtisanMois');
 
 const app = express();
 app.use(cors());  // <-- Autorise toutes les origines 
@@ -14,6 +15,7 @@ app.use(express.json());
 // Utiliser la route /api
 app.use('/Categorie', categorieRoutes);
 app.use('/Artisans', artisanRoutes);
+app.use('/ArtisanMois', artisanMoisRoutes);
 
 app.use(express.json());
 
