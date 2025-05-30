@@ -174,6 +174,7 @@ const Accueil = () => {
         className="form-control"
         placeholder="Nom"
         aria-label="Nom"
+        required
       />
     </div>
     <div className="col">
@@ -182,6 +183,7 @@ const Accueil = () => {
         className="form-control"
         placeholder="Prenom"
         aria-label="Prenom"
+        required
       />
     </div>
     </div>
@@ -193,6 +195,7 @@ const Accueil = () => {
         className="form-control"
         placeholder="Teléphone"
         aria-label="Tel"
+        required
       />
     </div>
     <div className="col">
@@ -201,6 +204,7 @@ const Accueil = () => {
         className="form-control"
         placeholder="Email"
         aria-label="Email"
+        required
       />
     </div>
     </div>
@@ -211,7 +215,8 @@ const Accueil = () => {
         className="form-control"
         placeholder="Votre message"
         aria-label="message"
-      style={{ height: "10rem" }}/>
+      style={{ height: "10rem" }}
+      required/>
     
 
     </div>

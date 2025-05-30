@@ -6,6 +6,7 @@ const categorieRoutes = require('./routes/RouteCategorie');
 const artisanRoutes = require('./routes/RouteArtisans');
 const artisanMoisRoutes = require('./routes/RouteArtisanMois');
 const listeArtisanRoutes = require('./routes/RouteListeArtisan');
+const RouteArtisanbyid = require('./routes/RouteArtisanbyid');
 
 const app = express();
 app.use(cors());  // <-- Autorise toutes les origines 
@@ -18,6 +19,7 @@ app.use('/Categorie', categorieRoutes);
 app.use('/Artisans', artisanRoutes);
 app.use('/ArtisanMois', artisanMoisRoutes);
 app.use('/listeArtisan', listeArtisanRoutes);
+app.use('/listeArtisansByCategorie', RouteArtisanbyid);
 
 app.use(express.json());
 
