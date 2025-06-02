@@ -1,4 +1,4 @@
-const db = require('../serveur'); // pool MySQL avec promise
+const db = require('../serveur'); // serveur
 exports.getListeArtisans = async () => {
   try {
     const sql = `
