@@ -89,7 +89,7 @@ VALUES ('1','Boucher','1'),
 ('14','Toiletteur','4'),
 ('15','Webdesign','4');
 
---Alimentation artisan : 
+--Alimentation artisans : 
 USE trouve_artisan;
 INSERT INTO T_Artisan (`id_artisan`, `nom`,`id_specialite`,`id_ville`,
  `note`, `a_propos`,`email`, `site_web`, `top`)
