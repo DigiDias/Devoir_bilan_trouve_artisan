@@ -64,7 +64,7 @@ export default function Header({ onSearch }) {
       style={{ backgroundColor: palette.headerBg }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand fw-bold" href="/Accueil">
+        <a href="/Accueil" className="navbar-brand fw-bold" >
           <img
             src={Logo}
             alt="Logo de l'entreprise"
