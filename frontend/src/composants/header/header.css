@@ -2,3 +2,91 @@
     font-family: 'Graphik-bold';
     font-weight: 700;
 }
+
+
+/* header.css */
+
+/* Reset basique */
+.navbar {
+  padding: 0.5rem 1rem;
+  font-family: 'Graphik-bold', sans-serif;
+}
+
+/* Couleurs depuis la palette */
+.navbar {
+  background-color: #0074c7; /* palette.headerBg */
+}
+
+/* Logo responsive */
+.navbar-brand img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Menu : mobile first */
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.nav-item a.nav-link {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-item a.nav-link:hover,
+.nav-item a.nav-link:focus {
+  color: #82b864; /* vert */
+  outline: none;
+}
+
+/* Form recherche */
+form.d-flex {
+  width: 100%;
+  justify-content: center;
+}
+
+form.d-flex input.form-control {
+  max-width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid #385050; /* gris */
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form.d-flex input.form-control:focus {
+  border-color: #82b864; /* vert */
+  outline: none;
+  box-shadow: 0 0 5px #82b864;
+}
+
+/* Bouton hamburger (mobile) */
+.navbar-toggler {
+  border-color: #385050;
+}
+
+/* Agrandir le toggle icon */
+.navbar-toggler-icon {
+  filter: invert(1); /* blanc */
+  width: 30px;
+  height: 30px;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 0;
+  }
+  form.d-flex {
+    justify-content: flex-end;
+    max-width: 300px;
+  }
+}

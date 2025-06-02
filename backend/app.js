@@ -2,28 +2,41 @@ const express = require('express');
 const serveur = require('./serveur');
 require('dotenv').config();
 const cors = require('cors');
+const path = require('path');
+
+// Import des routes
 const categorieRoutes = require('./routes/RouteCategorie');
 const artisanRoutes = require('./routes/RouteArtisans');
 const artisanMoisRoutes = require('./routes/RouteArtisanMois');
 const listeArtisanRoutes = require('./routes/RouteListeArtisan');
 const RouteArtisanbyid = require('./routes/RouteArtisanbyid');
+const RouteSelectArtisan = require('./routes/RouteSelectArtisan');
+const RoutePhoto = require('./routes/RoutePhoto');
+
+
 
 const app = express();
-app.use(cors());  // <-- Autorise toutes les origines 
 
-// Middleware pour parser le JSON 
-app.use(express.json());
+// Middleware généraux
+app.use(cors()); // Autorise toutes les origines
+app.use(express.json()); // Parse le JSON entrant
 
-// Utiliser la route /api
+// Middleware pour servir les images statiques depuis le dossier "public/images"
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
+
+// Routes de l'API
 app.use('/Categorie', categorieRoutes);
 app.use('/Artisans', artisanRoutes);
 app.use('/ArtisanMois', artisanMoisRoutes);
 app.use('/listeArtisan', listeArtisanRoutes);
 app.use('/listeArtisansByCategorie', RouteArtisanbyid);
+app.use('/ArtisanById', RouteSelectArtisan);
+app.use('/Photo', RoutePhoto);
 
-app.use(express.json());
 
+
+// Démarrage du serveur
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Serveur en ecoute sur le Port ${PORT}`);
+    console.log(`Serveur en écoute sur le port ${PORT}`);
 });
