@@ -17,6 +17,12 @@ const RoutePhoto = require('./routes/RoutePhoto');
 
 const app = express();
 
+// Middleware de logging des requêtes
+app.use((req, res, next) => {
+  console.log(`Requête reçue : ${req.method} ${req.path}`);
+  next();
+});
+
 // Middleware généraux
 app.use(cors()); // Autorise toutes les origines
 app.use(express.json()); // Parse le JSON entrant
@@ -38,9 +44,7 @@ const frontendBuildPath = path.join(__dirname, '../frontend/build');
 app.use(express.static(frontendBuildPath));
 
 // Pour toute autre route, renvoyer index.html de React (SPA)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-});
+
 
 // Démarrage du serveur
 const PORT = process.env.PORT || 5000;

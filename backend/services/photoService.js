@@ -2,76 +2,76 @@
 const PhotoArtisan = [
   {
     id_artisan: '1',
-    photo: 'http://localhost:5000/images/boucher.jpg',
+    photo: '1',
   },
   {
     id_artisan: '2',
-    photo: 'http://localhost:5000/images/boulanger.jpg',
+    photo: '2',
   },
     {
     id_artisan: '3',
-    photo: 'http://localhost:5000/images/chocolatier.jpg',
+    photo: '3',
   },
     {
     id_artisan: '4',
-    photo: 'http://localhost:5000/images/traiteur.jpg',
+    photo: '4',
   },
     {
     id_artisan: '5',
-    photo: 'http://localhost:5000/images/chauffagiste.jpg',
+    photo: '5',
   },
     {
     id_artisan: '6',
-    photo: 'http://localhost:5000/images/Electricien.jpg',
+    photo: '6',
   },
     {
     id_artisan: '7',
-    photo: 'http://localhost:5000/images/boulanger.jpg',
-  },
-    {
-    id_artisan: '2',
-    photo: 'http://localhost:5000/images/menuisier.jpg',
+    photo: '7',
   },
     {
     id_artisan: '8',
-    photo: 'http://localhost:5000/images/plombier.jpg',
+    photo: '8',
   },
     {
     id_artisan: '9',
-    photo: 'http://localhost:5000/images/couturier.jpg',
+    photo: '9',
+  },
+    {
+    id_artisan: '10',
+    photo: '10',
   },
 
     {
-    id_artisan: '10',
-    photo: 'http://localhost:5000/images/ferronier.jpg',
-  },
-    {
     id_artisan: '11',
-    photo: 'http://localhost:5000/images/ferronier.jpg',
+    photo: '11',
   },
     {
     id_artisan: '12',
-    photo: 'http://localhost:5000/images/coiffeur1.jpg',
+    photo: '12',
   },
-      {
+    {
     id_artisan: '13',
-    photo: 'http://localhost:5000/images/coiffeur2.jpg',
+    photo: '13',
   },
       {
     id_artisan: '14',
-    photo: 'http://localhost:5000/images/coiffeur3.jpg',
+    photo: '14',
   },
       {
     id_artisan: '15',
-    photo: 'http://localhost:5000/images/fleuriste.jpg',
+    photo: '15',
   },
       {
     id_artisan: '16',
-    photo: 'http://localhost:5000/images/toiletteur.jpg',
+    photo: '16',
   },
       {
     id_artisan: '17',
-    photo: 'http://localhost:5000/images/webdisigner.jpg',
+    photo: '17',
+  },
+      {
+    id_artisan: '18',
+    photo: '18',
   },
 ];
 
