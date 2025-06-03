@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/Accueil" replace />} />
+        <Route path="/" element={<Accueil />} />
         <Route path="/Accueil" element={<Accueil />} />
         <Route path="/categorie/:id" element={<Categorie />} />
         <Route path="/artisan/:id" element={<Artisan />} />

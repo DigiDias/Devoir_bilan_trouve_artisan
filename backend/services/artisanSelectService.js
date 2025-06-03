@@ -6,9 +6,9 @@ exports.getArtisanById = async (id) => {
     const [results] = await db.query(`
       SELECT a.id_artisan, a.nom AS nom_artisan, c.nom AS nom_categorie, a.note, a.A_propos AS description,
              a.email, a.site_web, b.nom AS specialite, d.nom AS ville 
-      FROM T_artisan a
-      LEFT JOIN T_specialite b ON a.id_specialite = b.id_specialite
-      LEFT JOIN t_Categorie c ON b.id_categorie = c.id_categorie
+      FROM t_artisan a
+      LEFT JOIN t_specialite b ON a.id_specialite = b.id_specialite
+      LEFT JOIN t_categorie c ON b.id_categorie = c.id_categorie
       LEFT JOIN t_ville d ON a.id_ville = d.id_ville
       WHERE a.id_artisan = ?;
     `, [id]);
