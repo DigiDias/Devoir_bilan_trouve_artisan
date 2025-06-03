@@ -6,73 +6,70 @@ const PhotoArtisan = [
   },
   {
     id_artisan: '2',
-    photo: '2',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/boulanger.jpg',
   },
     {
     id_artisan: '3',
-    photo: '3',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/Chocolatier.jpg',
   },
     {
     id_artisan: '4',
-    photo: '4',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/traiteur.jpg',
   },
     {
     id_artisan: '5',
-    photo: '5',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/chauffagiste.jpg',
   },
     {
     id_artisan: '6',
-    photo: '6',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/Electricien.jpg',
   },
     {
     id_artisan: '7',
-    photo: '7',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/menuisier.jpg',
   },
     {
     id_artisan: '8',
-    photo: '8',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/plombier.jpg',
   },
     {
     id_artisan: '9',
-    photo: '9',
+    photo: '9https://devoir-bilan-trouve-artisan.onrender.com/images/bigoutier.jpg',
   },
     {
     id_artisan: '10',
-    photo: '10',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/couturier.jpg',
   },
 
     {
     id_artisan: '11',
-    photo: '11',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/ferronier.jpg',
   },
     {
     id_artisan: '12',
-    photo: '12',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/coiffeur1.jpg',
   },
     {
     id_artisan: '13',
-    photo: '13',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/coiffeur2.jpg',
   },
       {
     id_artisan: '14',
-    photo: '14',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/coiffeur3.jpg',
   },
       {
     id_artisan: '15',
-    photo: '15',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/fleuriste.jpg',
   },
       {
     id_artisan: '16',
-    photo: '16',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/toiletteur.jpg',
   },
       {
     id_artisan: '17',
-    photo: '17',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/webdisigner.jpg',
   },
-      {
-    id_artisan: '18',
-    photo: '18',
-  },
+    
 ];
 
 const getPhotosByArtisanId = async (id) => {

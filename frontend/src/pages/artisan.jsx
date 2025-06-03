@@ -51,7 +51,7 @@ const Artisan = () => {
             <p className="card-text"><strong>Localisation :</strong> {artisan.ville}</p>
             <p className="card-text"><strong>Description :</strong> {artisan.description}</p>
             <p className="card-text"><strong>Site Web :</strong> {artisan.site_web || 'pas de site'}</p>
-            <img src={artisan.photo || 'lartisan ne dispose pas de photo'} alt="Photo de l'artisan" className="img-fluid mb-3 text-center" />
+            <img src={artisan.photo || 'lartisan ne dispose pas de photo'} alt={`Photo de l'artisan et ${artisan.specialite}`} className="img-fluid mb-3 text-center" />
 
             </div>
         </div>
