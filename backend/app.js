@@ -45,9 +45,10 @@ app.use(express.static(frontendBuildPath));
 
 // Pour toute autre route, renvoyer index.html de React (SPA)
 // Bon : on met un slash avant l’astérisque
-app.get('/.*/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(frontendBuildPath, 'index.html'));
 });
+
 
 
 // Démarrage du serveur
