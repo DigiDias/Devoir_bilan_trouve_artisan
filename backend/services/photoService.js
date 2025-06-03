@@ -2,7 +2,7 @@
 const PhotoArtisan = [
   {
     id_artisan: '1',
-    photo: '1',
+    photo: 'https://devoir-bilan-trouve-artisan.onrender.com/images/boucher.jpg',
   },
   {
     id_artisan: '2',
