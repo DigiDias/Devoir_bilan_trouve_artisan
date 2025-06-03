@@ -24,7 +24,7 @@ app.use(express.json()); // Parse le JSON entrant
 // Middleware pour servir les images statiques depuis le dossier "public/images"
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
-// Routes de l'API
+//Routes de l'API
 app.use('/Categorie', categorieRoutes);
 app.use('/Artisans', artisanRoutes);
 app.use('/ArtisanMois', artisanMoisRoutes);
@@ -32,6 +32,10 @@ app.use('/listeArtisan', listeArtisanRoutes);
 app.use('/listeArtisansByCategorie', RouteArtisanbyid);
 app.use('/ArtisanById', RouteSelectArtisan);
 app.use('/Photo', RoutePhoto);
+
+// === Servir le frontend React (build) ===
+const frontendBuildPath = path.join(__dirname, '../frontend/build');
+app.use(express.static(frontendBuildPath));
 
 
 
