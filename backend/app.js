@@ -37,7 +37,10 @@ app.use('/Photo', RoutePhoto);
 const frontendBuildPath = path.join(__dirname, '../frontend/build');
 app.use(express.static(frontendBuildPath));
 
-
+// Pour toute autre route, renvoyer index.html de React (SPA)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
 
 // Démarrage du serveur
 const PORT = process.env.PORT || 5000;
